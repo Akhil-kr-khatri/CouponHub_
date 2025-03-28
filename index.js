@@ -12,7 +12,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-app.use(express.static('CouponHub/public'));
+//app.use(express.static('CouponHub/public'));
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -76,7 +76,10 @@ app.get("/allCoupons", async (req, res) => {
   const coupons = [
       { cid: 1, title: "Domino's Discount", tc: "Get 20% off", photo: "dominos.png" },
       { cid: 2, title: "Offer", tc: "Rs. 100 Cashback", photo: "images.png" },
-      { cid: 3, title: "Zomato Offer", tc: "Flat 30% off", photo: "noise.png" }
+      { cid: 3, title: "Noise offer", tc: "Flat 30% off", photo: "noise.png" },
+      { cid: 4, title: "Chroma offer", tc: "Cashback upto 15%", photo: "chroma.png" },
+      { cid: 5, title: "My 11 circle", tc: "Get Rs. 500 joining bonus", photo: "my11circle.jpg" },
+      { cid: 6, title: "Get free delivery", tc: "Minimum order of Rs. 200", photo: "papa.jpeg" },
   ];
 
   res.render("allCoupons", { coupons });
