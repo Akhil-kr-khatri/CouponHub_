@@ -12,7 +12,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true
 }));
-//app.use(express.static('CouponHub/public'));
+app.use(express.static('CouponHub/public'));
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
