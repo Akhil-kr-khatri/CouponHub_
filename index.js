@@ -7,11 +7,11 @@ const app = express();
 const PORT = 8008;
 
 // Middleware for session
-app.use(session({
-    secret: "yourSecretKey", 
-    resave: false,
-    saveUninitialized: true
-}));
+// app.use(session({
+//     secret: "yourSecretKey", 
+//     resave: false,
+//     saveUninitialized: true
+// }));
 app.use(express.static('CouponHub/public'));
 
 // Middleware
